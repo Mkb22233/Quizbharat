@@ -1,3 +1,503 @@
+
+
+search
+Conversation with Gemini
+You said
+MAKE SOME CHANGE WHAT I AM PASTING AND KEEP SIGN IN BELOW ANLAKUDA GRAMPANCHAYAT
+
+Date: 26.10.2026 Name of Block: SULIAPADA Name of G.P: ANLAKUDA No. & Name of AC: 34, MORADA
+
+Ward No Name of Supervisor Team Code "No.of Households
+
+surveyed" No.of Voters entered in Surevey Forms No. of EPICs checked with CEO-App "No. of Forms  16 
+
+issued" "No. of Forms  17
+
+issued" No.of Forms 16 received No.of Forms 17 received
+
+Today Comulative Today Comulative Today Comulative
+
+
+Show code
+Your updated HTML file is ready:
+
+HTML icon
+Anlakuda_D2D_Survey_Entry_Update
+ HTML 
+Open
+The print preview section now includes a dedicated signature block at the bottom with designated lines for the Supervisor and the CRCC / Verifying Authority. The layout is optimized to display cleanly at the bottom of an A4 landscape printout. The default date on the form has also been set to 26.10.2026 to match your details. All original table columns and calculations remain fully intact.
+
+You said
+KEEP BLO SIGN REPLACING WITH CRCC
+
+Show code
+Your updated HTML file is ready:
+
+HTML icon
+Anlakuda_D2D_Survey_Entry_Update_v2
+ HTML 
+Open
+The signature block in the print preview section has been updated. It now reads "Signature of BLO / Verifying Authority" instead of CRCC, as requested. The rest of the layout and styling remains unchanged.
+
+You said
+REMOVE Verifying Authority
+
+Show code
+Your updated HTML file is ready:
+
+HTML icon
+Anlakuda_D2D_Survey_Entry_Update_v3
+ HTML 
+Open
+I have removed the " / Verifying Authority" text. The second signature block in the print preview section now simply reads "Signature of BLO".
+
+You said
+EPIC CHECK ADD COLUMN TODAY AND COMULATIVE
+
+Show code
+Your updated HTML file is ready:
+
+HTML icon
+Anlakuda_D2D_Survey_Entry_Update_v4
+ HTML 
+Open
+I've added the "Today" and "Cumulative" sub-columns under the "No. of EPICs Checked with CEO-App" header in both the editable entry table and the print preview layout. The fields are set up just like the other sections to work seamlessly when you type and print.
+
+You said
+A
+
+It looks like your message might have gotten cut off. How can I help you today?
+
+You said
+CHANGE THE " NAME OF SUPERVISER" AND ADD " NAME OF THE BLO"
+
+Show code
+Your updated HTML file is ready:
+
+HTML icon
+Anlakuda_D2D_Survey_Entry_Update_v5
+ HTML 
+Open
+I have replaced "Name of Supervisor" with "Name of the BLO" in the table column header and throughout the print preview logic.
+
+There is a file you can reference named "Anlakuda_D2D_Survey_Entry_Update_v5.html". Refer to this file by its name verbatim.
+
+You said
+make error free <!DOCTYPE html>
+
+<html lang="or">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KBC Quiz with Response Review</title>
+
+<style>
+
+  body { font-family: Arial, sans-serif; background: #f0f8ff; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+
+  #container { background: #fff; padding: 20px; border-radius: 10px; width: 600px; box-shadow: 0 0 10px rgba(0,0,0,0.3); overflow-y: auto; max-height: 90vh; }
+
+  h2 { margin-bottom: 20px; }
+
+  input { width: 95%; padding: 10px; margin: 5px 0; font-size: 16px; border-radius: 5px; border: 1px solid #333; }
+
+  button { display: block; width: 100%; padding: 10px; margin: 10px 0; font-size: 16px; border-radius: 5px; border: 1px solid #333; cursor: pointer; }
+
+  button:hover { background: #87cefa; color: #fff; }
+
+  #level { font-weight: bold; margin-bottom: 10px; }
+
+  .correct { color: green; font-weight: bold; }
+
+  .wrong { color: red; font-weight: bold; }
+
+  p { margin: 5px 0; }
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+  <!-- Start Form -->
+
+  <div id="start-form">
+
+    <h2>Welcome to KBC Quiz!</h2>
+
+    <input type="text" id="name" placeholder="Enter Your Name" required>
+
+    <input type="number" id="age" placeholder="Enter Your Age" required>
+
+    <input type="text" id="mobile" placeholder="Enter Mobile Number" required>
+
+    <button onclick="startQuiz()">Start Quiz</button>
+
+  </div>
+
+
+
+  <!-- Quiz Area -->
+
+  <div id="quiz-area" style="display:none;">
+
+    <div id="level">Level 1</div>
+
+    <h2 id="question">Question will appear here</h2>
+
+    <div id="options"></div>
+
+  </div>
+
+</div>
+
+
+
+<script>
+
+// Question Bank (abbreviated, add more questions as needed)
+
+const questions = [
+
+  // 1–10: Arts & Culture
+
+  {q:"“ସତ୍ୟପାଥ” - ?", opts:["ମୂର୍ତ୍ତି","ସଙ୍ଗୀତ","କଳା","ପର୍ବ"], a:2},
+
+  {q:"ଓଡ଼ିଶାର ରାଜ୍ୟ ନୃତ୍ୟ କ’ଣ?", opts:["ଛାଉ","ଓଡିଶୀ","କଥକ","ଭରତନାଟ୍ୟମ"], a:1},
+
+  {q:"“ଜୟଦେବ” କେଉଁ ଗ୍ରନ୍ଥ ରଚନା କରିଥିଲେ?", opts:["ଗୀତଗୋବିନ୍ଦ","ମହାଭାରତ","ରାମାୟଣ","ସରଳା ମହାଭାରତ"], a:0},
+
+  {q:"ଓଡ଼ିଶାର ପ୍ରସିଦ୍ଧ ନୃତ୍ୟକଳା ଶିକ୍ଷା ସଂସ୍ଥା କ’ଣ?", opts:["କଳାକ୍ଷେତ୍ର","ଉଦୟନାଚାର୍ଯ୍ୟ ଆକାଦେମି","କଳା ଭବନ","ସଂଗୀତ ନିକେତନ"], a:1},
+
+  {q:"ଓଡ଼ିଶାର ପାଳା କ’ଣ ସହିତ ସମ୍ବନ୍ଧିତ?", opts:["ନୃତ୍ୟ","ସଙ୍ଗୀତ ଓ ଗାୟନ","ନାଟକ","ଚିତ୍ରକଳା"], a:1},
+
+  {q:"“ଧନୁ ଯାତ୍ରା” କେଉଁ ଜିଲ୍ଲାରେ ହୁଏ?", opts:["ବଲାଙ୍ଗିର","ପୁରୀ","କଟକ","ସମ୍ବଲପୁର"], a:3},
+
+  {q:"“ରଥଯାତ୍ରା” କେଉଁ ଦେବଙ୍କ ସହିତ ସମ୍ବନ୍ଧିତ?", opts:["ଜଗନ୍ନାଥ","ଶିବ","ବିଷ୍ଣୁ","ବ୍ରହ୍ମା"], a:0},
+
+  {q:"ଓଡ଼ିଶାର ରାଜ୍ୟ ସଙ୍ଗୀତ କ’ଣ?", opts:["ବନେ ବସି","ବନେ ବନେ ତୁଳସୀ","ଜୟ ଜଗନ୍ନାଥ","ବନେ ବସି ତୁଳସୀ"], a:2},
+
+  {q:"ଓଡ଼ିଶାର ପ୍ରସିଦ୍ଧ ହସ୍ତଶିଳ୍ପ କ’ଣ?", opts:["ପତ୍ତଚିତ୍ର","ଟେରାକୋଟା","ବାସ ଶିଳ୍ପ","ସବୁ"], a:3},
+
+  {q:"ପୁରୀ ମନ୍ଦିର କ’ଣ ଦେବଙ୍କ?", opts:["ଶିବ","ଜଗନ୍ନାଥ","କୃଷ୍ଣ","ବିଷ୍ଣୁ"], a:1},
+
+
+
+  // 11–20: Science
+
+  {q:"ଜଳର ରସାୟନିକ ସୂତ୍ର କ’ଣ?", opts:["H2O","CO2","O2","NaCl"], a:0},
+
+  {q:"ପୃଥିବୀର ସବୁଠାରୁ ନିକଟତମ ତାରା କ’ଣ?", opts:["ସୂର୍ଯ୍ୟ","ଚନ୍ଦ୍ର","ଧ୍ରୁବତାରା","ଶୁକ୍ର"], a:0},
+
+  {q:"ସବୁଜ ପତ୍ରରେ କ’ଣ ଥାଏ?", opts:["କ୍ଲୋରୋଫିଲ୍","ହିମୋଗ୍ଲୋବିନ୍","କାର୍ବନ୍","ନାଇଟ୍ରୋଜେନ୍"], a:0},
+
+  {q:"ମାନବ ଶରୀରରେ କ’ଣ ରକ୍ତକଣି ରହିଥାଏ?", opts:["RBC","DNA","RNA","ATP"], a:0},
+
+  {q:"ବିଦ୍ୟୁତ ଚାଳକ କ’ଣ?", opts:["ତାମା","କାଠ","ପ୍ଲାଷ୍ଟିକ","କାଗଜ"], a:0},
+
+  {q:"ଗ୍ୟାସ ରୂପରେ ଅକ୍ସିଜେନ୍ କ’ଣ କାମ କରେ?", opts:["ଶ୍ୱାସ-ପ୍ରଶ୍ୱାସ","ଜଳ ତିଆରି","ଶିତଳିକରଣ","ଗରମି"], a:0},
+
+  {q:"ଗୁରୁତ୍ୱାକର୍ଷଣ ବିଷୟରେ କେଉଁ ବିଜ୍ଞାନୀ ଖୋଜିଥିଲେ?", opts:["ନ୍ୟୁଟନ୍","ଆଇନଷ୍ଟାଇନ୍","ଗାଲିଲିଓ","ମେଣ୍ଡେଲ୍"], a:0},
+
+  {q:"ଶକ୍ତିର ମାପକ ଏକକ କ’ଣ?", opts:["ଜୁଲ୍","ମିଟର୍","କିଲୋଗ୍ରାମ୍","ଲିଟର୍"], a:0},
+
+  {q:"ସୂର୍ଯ୍ୟରେ କ’ଣ ପ୍ରକ୍ରିୟା ହୁଏ?", opts:["ନ୍ୟୁକ୍ଲିଅର୍ ଫିଉସନ୍","ନ୍ୟୁକ୍ଲିଅର୍ ଫିସନ୍","ଦହନ","ଗଳନ"], a:0},
+
+  {q:"ପାଣି 100°C ରେ କ’ଣ ହୁଏ?", opts:["ଫୋଟେ","ବରଫ","ଗଳିଯାଏ","ବନ୍ଦହୁଏ"], a:0},
+
+
+
+  // 21–30: Math
+
+  {q:"2+2=?", opts:["3","4","5","6"], a:1},
+
+  {q:"10×5=?", opts:["15","20","50","25"], a:2},
+
+  {q:"100 ÷ 10=?", opts:["5","10","15","20"], a:1},
+
+  {q:"ଏକ ବୃତ୍ତରେ କେତେ ଡିଗ୍ରୀ ଥାଏ?", opts:["90","180","270","360"], a:3},
+
+  {q:"ତ୍ରିଭୁଜର କୋଣଗୁଡ଼ିକର ଯୋଗ ?", opts:["90","120","180","360"], a:2},
+
+  {q:"25% of 200 =", opts:["25","50","100","200"], a:1},
+
+  {q:"9×9=?", opts:["72","81","99","90"], a:1},
+
+  {q:"ସମାଧିତ ସଂଖ୍ୟା କ’ଣ?", opts:["5","0","2","3"], a:2},
+
+  {q:"√49 =", opts:["6","7","8","9"], a:1},
+
+  {q:"1 କିଲୋମିଟର୍ = ?", opts:["100 ମିଟର୍","1000 ମିଟର୍","10 ମିଟର୍","500 ମିଟର୍"], a:1},
+
+
+
+  // 31–40: History
+
+  {q:"ଭାରତର ପ୍ରଥମ ରାଷ୍ଟ୍ରପତି କିଏ?", opts:["ଡ଼ଃ ରାଜେନ୍ଦ୍ର ପ୍ରସାଦ","ଡ଼ଃ ଅବ୍ଦୁଲ୍ କଲାମ","ନେହେରୁ","ସର୍ଦାର ପଟେଲ୍"], a:0},
+
+  {q:"ମହାତ୍ମା ଗାନ୍ଧୀଙ୍କ ଜନ୍ମ ସ୍ଥାନ?", opts:["ପୋରବନ୍ଦର","ଦିଲ୍ଲୀ","ପାଟନା","କଲକାତା"], a:0},
+
+  {q:"ଭାରତ କେବେ ସ୍ଵାଧୀନ ହେଲା?", opts:["1942","1947","1950","1930"], a:1},
+
+  {q:"ଭାରତର ପ୍ରଥମ ପ୍ରଧାନମନ୍ତ୍ରୀ କିଏ?", opts:["ଇନ୍ଦିରା ଗାନ୍ଧୀ","ନେହେରୁ","ଲାଲବହାଦୁର ଶାସ୍ତ୍ରୀ","ରାଜିବ ଗାନ୍ଧୀ"], a:1},
+
+  {q:"“କିଲା” କେଉଁଟି ଦିଲ୍ଲୀରେ ଅବସ୍ଥିତ?", opts:["ଲାଲକିଲା","ଚିତ୍ରକୋଟ","କୋଣାର୍କ","ପୁରୀ"], a:0},
+
+  {q:"ଆଶୋକ କେଉଁ ବଂଶର?", opts:["ମୌର୍ଯ୍ୟ","ଗୁପ୍ତ","ମୁଘଳ","ଚୋଳ"], a:0},
+
+  {q:"କୋଣାର୍କ ମନ୍ଦିର ନିର୍ମାତା କିଏ?", opts:["ନରସିଂହଦେବ","ଅଶୋକ","ଖରବେଳ","କଳିଙ୍ଗ"], a:0},
+
+  {q:"“ସିଭିଲ୍ ଡିସୋବିଡିଏନ୍ସ” ଆନ୍ଦୋଳନ କିଏ ଆରମ୍ଭ କଲେ?", opts:["ନେହେରୁ","ଗାନ୍ଧୀ","ସୁଭାଷ ବୋସ","ପଟେଲ୍"], a:1},
+
+  {q:"ସୁଭାଷ ବୋସଙ୍କ ସ୍ଲୋଗାନ୍ କ’ଣ?", opts:["ଜୟ ହିନ୍ଦ","ବନ୍ଦେ ମାତରମ୍","ସତ୍ୟମେବ ଜୟତେ","ଇନକିଲାବ ଜିନ୍ଦାବାଦ"], a:0},
+
+  {q:"ଭାରତ ସଂବିଧାନ ଲାଗୁ ହେଲା କେବେ?", opts:["26 ଜାନୁଆରୀ 1950","15 ଅଗଷ୍ଟ 1947","2 ଅକ୍ଟୋବର 1949","30 ଜାନୁଆରୀ 1951"], a:0},
+
+
+
+  // 41–50: Geography
+
+  {q:"ଭାରତର ରାଜଧାନୀ କ’ଣ?", opts:["ମୁମ୍ବାଇ","ନୂଆଦିଲ୍ଲୀ","କଲକାତା","ଚେନ୍ନାଇ"], a:1},
+
+  {q:"ଓଡ଼ିଶାର ରାଜଧାନୀ କ’ଣ?", opts:["କଟକ","ଭୁବନେଶ୍ୱର","ପୁରୀ","ସମ୍ବଲପୁର"], a:1},
+
+  {q:"ଭାରତର ସବୁଠାରୁ ଲମ୍ବା ନଦୀ କ’ଣ?", opts:["ଗଙ୍ଗା","ୟମୁନା","ଗୋଦାବରୀ","ବ୍ରହ୍ମପୁତ୍ର"], a:0},
+
+  {q:"ଓଡ଼ିଶାର ପ୍ରଧାନ ନଦୀ କ’ଣ?", opts:["ମହାନଦୀ","ବ୍ରହ୍ମପୁତ୍ର","ଗଙ୍ଗା","ସବର୍ମତୀ"], a:0},
+
+  {q:"ଭାରତ କେଉଁ ମହାଦେଶରେ?", opts:["ଆସିଆ","ୟୁରୋପ","ଆଫ୍ରିକା","ଅଷ୍ଟ୍ରେଲିଆ"], a:0},
+
+  {q:"ଓଡ଼ିଶା ସମୁଦ୍ରତଟ କେଉଁ ସାଗର ପାଖରେ?", opts:["ବଙ୍ଗୋପସାଗର","ଆରବ ସାଗର","ଲାଲ ସାଗର","ଚୀନ ସାଗର"], a:0},
+
+  {q:"କୋଣାର୍କ ସୂର୍ଯ୍ୟ ମନ୍ଦିର କେଉଁ ଜିଲ୍ଲାରେ?", opts:["ପୁରୀ","କଟକ","ଖୋର୍ଦ୍ଧା","ଗଞ୍ଜାମ"], a:0},
+
+  {q:"ଚିଲିକା ହ୍ରଦ କ’ଣ ପ୍ରକାରର?", opts:["ଖାରାପାଣି","ମିଠାପାଣି","ପର୍ବତୀୟ","ହିମାଲୟୀ"], a:0},
+
+  {q:"ସିମିଲିପାଲ କ’ଣ?", opts:["ବନ୍ୟଜନ୍ତୁ ଅଭୟାରଣ୍ୟ","ନଦୀ","ପର୍ବତ","ଗାଁ"], a:0},
+
+  {q:"ଭାରତର ରାଜ୍ୟ ସଂଖ୍ୟା କେତେ?", opts:["28","25","30","27"], a:0},
+
+
+
+  // 51–60: Nutrition
+
+  {q:"ଭାରତର ପ୍ରଧାନ ପୋଷଣ ଉପାଦାନ କ’ଣ?", opts:["ଚିନି","ଆଟା","ଧାନ","ଓଇଲ"], a:2},
+
+  {q:"ପୋଷଣର ଏକ ମୁଖ୍ୟ ଉପାଦାନ କ’ଣ?", opts:["ପ୍ରୋଟିନ୍","ସୁଗର୍","ସୋଡିଅମ୍","କାଫିନ୍"], a:0},
+
+  {q:"ଭିଟାମିନ୍ C ସମ୍ପୂର୍ଣ୍ଣ ମିଳେ?", opts:["ଲେମନ୍","ଚିକେନ୍","ଓଇଲ","ଦହି"], a:0},
+
+  {q:"କାଲସିୟମ୍ ସମ୍ପୂର୍ଣ୍ଣ ମିଳେ?", opts:["ଦୁଧ","ମାଂସ","ଆଳୁ","ତେଲ"], a:0},
+
+  {q:"ଲୋହା ଅଭାବରେ ହୁଏ?", opts:["ଅନେମିଆ","ଡାୟାବେଟିସ୍","ଜଣ୍ଟ ଦୁଃଖ","ପେଟ ରୋଗ"], a:0},
+
+  {q:"କେଉଁ ଖାଦ୍ୟ ପ୍ରୋଟିନ୍ ସମୃଦ୍ଧ?", opts:["ମାଂସ","ଚାଉଳ","ସୁଗର୍","ତେଲ"], a:0},
+
+  {q:"ଭିଟାମିନ୍ A ମିଳେ?", opts:["ଗାଜର","ଲେମନ୍","ଆଳୁ","ଦହି"], a:0},
+
+  {q:"କେଉଁ ଖାଦ୍ୟରେ ଫାଇବର୍ ଅଧିକ?", opts:["ସବୁଜ ସବ୍ଜି","ତେଲ","ଓଇଲ","ଚିନି"], a:0},
+
+  {q:"ଶରୀରର ପାଣିର ପରିମାଣ ସ୍ଥିର ରହିବାକୁ ଦାୟୀ?", opts:["ଜଳ","ତେଲ","ମାଂସ","ଚିନି"], a:0},
+
+  {q:"କାଲସିୟମ୍ ହାରାହାରି ହେଲେ କ’ଣ ହୁଏ?", opts:["ହାଡ଼ ଦୁର୍ବଳ ହୁଏ","ଚାକୁଲେଟି ହୁଏ","ଓଇଲ ହୁଏ","ରକ୍ତ ସଂଚାର ଦୁର୍ବଳ"], a:0}
+
+];
+
+
+
+// Pick 20 random questions
+
+let questions = questionBank.sort(() => 0.5 - Math.random()).slice(0, 20);
+
+let currentLevel = 0;
+
+let score = 0;
+
+let playerName = "";
+
+let responses = []; // Store all responses
+
+
+
+function startQuiz() {
+
+  const name = document.getElementById('name').value.trim();
+
+  const age = document.getElementById('age').value.trim();
+
+  const mobile = document.getElementById('mobile').value.trim();
+
+
+
+  if(!name || !age || !mobile){
+
+    alert("ସମସ୍ତ ତଥ୍ୟ ଦିଅନ୍ତୁ।");
+
+    return;
+
+  }
+
+
+
+  playerName = name;
+
+  document.getElementById('start-form').style.display = "none";
+
+  document.getElementById('quiz-area').style.display = "block";
+
+  loadQuestion();
+
+}
+
+
+
+function loadQuestion() {
+
+  if(currentLevel >= questions.length){
+
+    showResults();
+
+    return;
+
+  }
+
+
+
+  const q = questions[currentLevel];
+
+  document.getElementById('level').innerText = "Level " + (currentLevel+1);
+
+  document.getElementById('question').innerText = q.q;
+
+
+
+  const optionsDiv = document.getElementById('options');
+
+  optionsDiv.innerHTML = "";
+
+  q.opts.forEach((opt, idx) => {
+
+    const btn = document.createElement('button');
+
+    btn.innerText = opt;
+
+    btn.onclick = () => checkAnswer(idx);
+
+    optionsDiv.appendChild(btn);
+
+  });
+
+}
+
+
+
+function checkAnswer(selected) {
+
+  const q = questions[currentLevel];
+
+  // Store response
+
+  responses.push({
+
+    question: q.q,
+
+    options: q.opts,
+
+    correctAnswer: q.opts[q.a],
+
+    selectedAnswer: q.opts[selected],
+
+    isCorrect: selected === q.a
+
+  });
+
+
+
+  if(selected === q.a) score++;
+
+  currentLevel++;
+
+  loadQuestion();
+
+}
+
+
+
+function showResults() {
+
+  let responseHTML = responses.map((r, idx) => {
+
+    return `<p><strong>Q${idx+1}:</strong> ${r.question}<br>
+
+            <strong>Your Answer:</strong> ${r.selectedAnswer} 
+
+            <span class="${r.isCorrect ? 'correct' : 'wrong'}">(${r.isCorrect ? 'Correct' : 'Wrong'})</span><br>
+
+            <strong>Correct Answer:</strong> ${r.correctAnswer}</p>`;
+
+  }).join("");
+
+
+
+  document.getElementById('container').innerHTML = `
+
+    <h2>Quiz Completed! 🎉</h2>
+
+    <p>Thank you ${playerName}</p>
+
+    <p>Your Score: ${score} / ${questions.length}</p>
+
+    <h3>Review Your Answers:</h3>
+
+    ${responseHTML}`;
+
+}
+
+</script>
+
+
+
+</body>
+
+</html>
+
+Compare with other AI
+
+
+Liner
+
+
+ChatGPT
+
+Claude
+Show code
+The error in your original code was caused by using the variable name questions for two different things. You defined the initial array of 60 questions as const questions = [...], and then tried to create a new array with the same name by doing let questions = questionBank.sort(...).
+
+I have fixed this by renaming the initial array of all questions to questionBank.
+
+Here is the error-free, updated HTML file:
+
+HTML icon
+KBC_Quiz
+ HTML 
+Open
+
+
+
+
+Pro
+Gemini is AI and can make mistakes.
+
+Processed and analyzed in code
+
 <!DOCTYPE html>
 <html lang="or">
 <head>
@@ -38,8 +538,8 @@
 </div>
 
 <script>
-// Question Bank (abbreviated, add more questions as needed)
-const questions = [
+// Question Bank 
+const questionBank = [
   // 1–10: Arts & Culture
   {q:"“ସତ୍ୟପାଥ” - ?", opts:["ମୂର୍ତ୍ତି","ସଙ୍ଗୀତ","କଳା","ପର୍ବ"], a:2},
   {q:"ଓଡ଼ିଶାର ରାଜ୍ୟ ନୃତ୍ୟ କ’ଣ?", opts:["ଛାଉ","ଓଡିଶୀ","କଥକ","ଭରତନାଟ୍ୟମ"], a:1},
@@ -191,4 +691,5 @@ function showResults() {
 
 </body>
 </html>
-
+KBC_Quiz.html
+Displaying KBC_Quiz.html.
